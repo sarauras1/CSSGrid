@@ -1,0 +1,20 @@
+.container {
+    display: grid;
+    /* Freactions units below are use to shrink the div equaly and grow with the screen side
+    below 2 diffrent ways to write fractions units
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns:  repeat(3, 1fr);
+    the middle fraction units will be bigger
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-columns:  repeat(3, 1fr);
+     */ 
+    
+    /* can do the same with te row 
+    grid-template-rows: 50px 50px;
+    the below has the same output to the above
+     grid-template-columns:  repeat(3, 1fr);
+     the below is the best fastest shortcut row an column after
+    */
+    grid-template: repeat(2, 50px) / repeat(3, 1fr);
+    grid-gap: 3px;
+}

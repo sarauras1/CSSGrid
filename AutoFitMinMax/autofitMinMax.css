@@ -1,0 +1,11 @@
+.container {
+    display: grid;
+    grid-gap: 5px;
+    /* auto fit is like flex wrap the column will adjust accourding to the screen size
+    more column for big screens less columns for small screens */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(2, 100px);
+    /* the below is necessary because the hight of the
+     boxes will spread equaly try to remove it to see the difference */
+    grid-auto-rows: 100px;
+}

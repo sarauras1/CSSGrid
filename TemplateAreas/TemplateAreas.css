@@ -1,0 +1,70 @@
+
+
+/* basic.css */
+html, body {
+    box-sizing: border-box;
+    background-color: #ffeead;
+    height: 100%;
+    padding: 10px;
+    margin: 0px;
+  }
+/* This is similar to positions but is responsive also in height and the 3th row
+is set auto so it adjust automatically according to the screen size */
+
+.container {
+    height: 100%;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 40px auto 40px;
+    /* 12 h are refering to the number of the columns 
+    h is a reference can be named any way the below is 
+    a visual rapresentation of how we want the grid 
+    to look like*/
+   
+    grid-template-areas: 
+    "m h h h h h h h h h h h"
+    "m c c c c c c c c c c c"
+    "f f f f f f f f f f f f";
+    
+    
+    /*  
+    we can replace the letters with dots to have white
+    spaces
+      grid-template-areas: 
+    ". h h h h h h h h h h ."
+    "m c c c c c c c c c c c"
+    "m f f f f f f f f f f f";
+    
+    But we cannot make triangles like below 
+    it will break all the layout
+    it needs to be rettangles
+      grid-template-areas: 
+    ". h h h h h h h h h h ."
+    "m c c c c c c c c f c c"
+    "m f f f f f f f f f f f";
+    */
+}
+
+.header {
+    /* grid-column: 1 / -1;
+    the above is the old way of positioning the items
+    thanks to grid template now we to like below */
+    grid-area: h;
+}
+
+.menu { grid-area: m;}
+
+.content {
+    /* grid-column: 2 / -1; 
+     the above is the old way of positioning the items
+    thanks to grid template now we to like below*/
+    grid-area: c;
+}
+
+.footer {
+    /* grid-column: 1 / -1; 
+     the above is the old way of positioning the items
+    thanks to grid template now we to like below*/
+    grid-area: f;
+}
